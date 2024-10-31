@@ -1,0 +1,16 @@
+<?php
+include "connect.php";
+
+
+$name=$_GET['name'];
+
+$query="delete from student where Name='$name'";  
+
+
+$con->query($query);
+
+//redirect to main page using header() library function in php
+
+header("location: /web/show.php ");
+
+?>
